@@ -59,4 +59,4 @@ export const {
     unselectPokemon
 } = pokeSlice.actions;
 
-export default pokeSlice;
+export default pokeSlice.reducer;

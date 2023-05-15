@@ -52,5 +52,10 @@
   },
   "devDependencies": {
     "@types/material-ui": "^0.21.12"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "axios": "axios/dist/node/axios.cjs"
+    }
   }
 }

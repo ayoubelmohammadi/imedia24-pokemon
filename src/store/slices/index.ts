@@ -2,7 +2,6 @@ import {combineReducers} from 'redux';
 import PokeSlice from "./pokeSlice";
 
 const rootReducer = combineReducers({
-    poke: PokeSlice.reducer
+    poke: PokeSlice
 });
-export type RootState = ReturnType<typeof rootReducer>;
 export default rootReducer;

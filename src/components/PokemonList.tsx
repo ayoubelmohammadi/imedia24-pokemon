@@ -1,6 +1,6 @@
 import InfiniteScroll from 'react-infinite-scroll-component';
 import {useDispatch, useSelector} from "react-redux";
-import {RootState} from "../store/slices";
+import {RootState} from "../store";
 import {useEffect, useState} from "react";
 import {getPokemonListStart, Pokemon} from "../store/slices/pokeSlice";
 import {Grid} from "@mui/material";
@@ -23,8 +23,8 @@ export default function PokemonList() {
             <Grid container spacing={4}>
                 {pokemons.map(e =>
                     (
-                        <Grid item xs={12} sm={6} md={4} lg={12/5} >
-                            <PokemonCard poke={e} key={e.id}/>
+                        <Grid data-testid='poke' key={e.id}  item xs={12} sm={6} md={4} lg={12/5} >
+                            <PokemonCard poke={e}/>
                         </Grid>
                     )
                 )}
