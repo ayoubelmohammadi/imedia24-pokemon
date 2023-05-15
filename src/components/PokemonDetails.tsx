@@ -10,7 +10,7 @@ import {
     Typography
 } from "@mui/material";
 import {useDispatch, useSelector} from "react-redux";
-import {RootState} from "../store/slices";
+import {RootState} from "../store";
 import {unselectPokemon} from "../store/slices/pokeSlice";
 import React, {useEffect, useState} from "react";
 import {PokemonDetail} from "../api/pokeApi";
