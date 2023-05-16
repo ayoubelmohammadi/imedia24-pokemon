@@ -1,46 +1,85 @@
-# Getting Started with Create React App
+# iMedia24 Pokemon
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a React.js application that showcases a collection of Pokémon characters.
 
-## Available Scripts
+## Getting Started
 
-In the project directory, you can run:
+These instructions will guide you on how to set up and run the project on your local machine.
 
-### `npm start`
+### Prerequisites
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+To run this project, you need to have the following installed on your local machine:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Node.js (version 14 or higher)
+- npm (Node Package Manager)
+- Docker (optional)
 
-### `npm test`
+### Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Follow these steps to install and run the project:
 
-### `npm run build`
+1. Clone the repository:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```shell
+git clone https://github.com/ayoubelmohammadi/imedia24-pokemon.git
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. Change into the project directory:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```shell
+cd imedia24-pokemon
+```
 
-### `npm run eject`
+3. Install the dependencies:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```shell
+npm install
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Running the Application
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+To run the application locally:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+1. Start the development server:
 
-## Learn More
+```shell
+npm start
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+2. Open your web browser and visit `http://localhost:3000` to access the application.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Docker
+
+You can also run the application using Docker. Docker must be installed on your local machine.
+
+#### Option 1: Use Dockerfile (build locally)
+
+1. Build the Docker image from the Dockerfile:
+
+```shell
+docker build -t imedia24-pokemon .
+```
+
+2. Start a container from the local image:
+
+```shell
+docker run -p 3000:3000 imedia24-pokemon
+```
+
+3. Open your web browser and visit `http://localhost:3000` to access the application.
+
+#### Option 2: Use Docker Hub image (fetch from Docker Hub)
+
+If you prefer to use the pre-built Docker image from Docker Hub:
+
+1. Start a container using the image from Docker Hub:
+
+```shell
+docker run -p 3000:3000 ayoubelmohammadi/imedia24-pokemon
+```
+
+2. Open your web browser and visit `http://localhost:3000` to access the application.
+
+## License
+
+This project is licensed under the [MIT LICENSE](LICENSE).
