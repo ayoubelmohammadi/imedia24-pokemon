@@ -17,6 +17,6 @@ test("Poke Card", async () => {
             <PokemonCard poke={pekachu}/>
         </Provider>
     );
-    expect(screen.getAllByText("pekachu")).toBeInTheDocument()
+    expect(screen.getByText("pekachu")).toBeInTheDocument()
 
 });
