@@ -62,6 +62,4 @@ jobs:
           context: ./
           file: ./Dockerfile
           push: true
-          tags:
-            - ${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:latest
-            - ${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:${{ github.sha }}
+          tags: ${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:latest ,  ${{ secrets.DOCKER_USERNAME }}/${{ env.IMAGE_NAME }}:${{ github.sha }}
