@@ -1,11 +1,8 @@
 // src/store/slices/__tests__/pokeSlice.test.ts
-
 import pokeSlice, {
     getPokemonListStart,
     getPokemonListSuccess,
-    getPokemonListFailure,
-    selectPokemonStart,
-    selectPokemonSuccess,
+    getPokemonListFailure
 } from '../store/slices/pokeSlice';
 
 describe('pokeSlice reducer', () => {
@@ -30,7 +27,7 @@ describe('pokeSlice reducer', () => {
     it('should handle getPokemonListSuccess', () => {
         const action = {
             type: getPokemonListSuccess.type,
-            payload: [{name: 'Pikachu', url: 'http://...', id: 1}],
+            payload: [{name: 'Pikachu', url: 'https://...', id: 1}],
         };
         const state = pokeSlice(undefined, action);
         expect(state.status).toBe('succeeded');
