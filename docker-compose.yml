@@ -1,9 +1,10 @@
-version: '3'
+version: "3.7"
 services:
   pokemon:
-    # service 1 container name
-    container_name: pokemon
+    container_name: pokemon-cont-1
     build:
       context: .
+      dockerfile:
+        Dockerfile
     ports:
       - "3000:80"

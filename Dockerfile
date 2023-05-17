@@ -1,13 +1,16 @@
-# build environment
-FROM node:14.5.0-alpine AS compiler
+FROM node:16.18.0-alpine as build
+
 WORKDIR /app
-COPY . ./app
+
+COPY . /app
+ENV PATH /app/node_modules/.bin:$PATH
 RUN npm i
-RUN npm build
-# FROM nginx:latest-with-onbuild
-FROM nginx:latest
+RUN npm run build
 
-# it works to copy
-COPY --from=compiler /app/build/ /usr/share/nginx/html/
+FROM nginx:alpine
+COPY --from=build /app/build /usr/share/nginx/html
 
+# expose port 80 to the outer world
 EXPOSE 80
+# start nginx
+CMD ["nginx", "-g", "daemon off;"]

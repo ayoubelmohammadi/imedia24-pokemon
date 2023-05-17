@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="16d7bf6b-b0b9-42cf-a279-064e75a16c9d" name="Changes" comment="add CI with GitHub Actions">
-      <change beforePath="$PROJECT_DIR$/src/test/PokeCard.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/PokeCard.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,24 +43,12 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "settings.typescriptcompiler",
     "ts.external.directory.path": "/Users/iub/demos/pokemon/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="npm.test">
-    <configuration name="Dockerfile build" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
-      <deployment type="dockerfile">
-        <settings>
-          <option name="imageTag" value="node14.5.0-alpine_build" />
-          <option name="buildCliOptions" value="--target build" />
-          <option name="buildKitEnabled" value="true" />
-          <option name="buildOnly" value="true" />
-          <option name="sourceFilePath" value="Dockerfile" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Docker.docker-compose.yml.react-prod: Compose Deployment">
     <configuration name="Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
       <deployment type="dockerfile">
         <settings>
@@ -68,11 +58,15 @@
       <method v="2" />
     </configuration>
     <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
-      <deployment type="docker-compose.yml" />
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
       <method v="2" />
     </configuration>
     <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
-      <deployment type="dockerfile" />
+      <deployment type="dockerfile">
+        <settings />
+      </deployment>
       <method v="2" />
     </configuration>
     <configuration name="docker-compose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
@@ -96,6 +90,19 @@
       </deployment>
       <method v="2" />
     </configuration>
+    <configuration name="docker-compose.yml.react-prod: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="react-prod" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <configuration name="test" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -108,11 +115,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.docker-compose.yml.react-prod: Compose Deployment" />
         <item itemvalue="npm.test" />
-        <item itemvalue="Docker.docker-compose.yml.pokemon: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml.pokemon: Compose Deployment" />
         <item itemvalue="Docker.Dockerfile" />
-        <item itemvalue="Docker.Dockerfile build" />
       </list>
     </recent_temporary>
   </component>
@@ -125,7 +132,8 @@
       <option name="presentableId" value="Default" />
       <updated>1684267867174</updated>
       <workItem from="1684267873992" duration="403000" />
-      <workItem from="1684270293474" duration="9829000" />
+      <workItem from="1684270293474" duration="10982000" />
+      <workItem from="1684284467064" duration="2931000" />
     </task>
     <task id="LOCAL-00001" summary="add CI with GitHub Actions">
       <created>1684272976192</created>
@@ -155,7 +163,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684282332441</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add CI with GitHub Actions">
+      <created>1684282825427</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1684282825427</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -175,5 +190,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add CI with GitHub Actions" />
     <option name="LAST_COMMIT_MESSAGE" value="add CI with GitHub Actions" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
